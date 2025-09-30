@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خريطة الاستثمارات - أمانة منطقة الحدود الشمالية | عرض تجريبي</title>
+    <meta name="description" content="عرض واجهة خريطة أراضي الاستثمارات بمدينة عرعر مع فلاتر تفاعلية للعرض في Cityscape Global." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+    <!-- Splash Screen -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-logo-container">
+                <div class="splash-icon">
+                    <svg viewBox="0 0 100 100" class="city-icon">
+                        <path d="M20,80 L20,40 L35,40 L35,80 M40,80 L40,25 L55,25 L55,80 M60,80 L60,35 L75,35 L75,80" 
+                              stroke="currentColor" stroke-width="3" fill="none" class="building-path"/>
+                        <circle cx="50" cy="15" r="8" fill="currentColor" class="palm-circle"/>
+                    </svg>
+                </div>
+                <h1 class="splash-title">خريطة الاستثمارات</h1>
+                <p class="splash-subtitle">أمانة منطقة الحدود الشمالية</p>
+                <div class="splash-event">Cityscape Global 2025</div>
+            </div>
+            <div class="splash-stats">
+                <div class="splash-stat">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">فرصة استثمارية</div>
+                </div>
+                <div class="splash-stat">
+                    <div class="stat-number" data-target="2500000">0</div>
+                    <div class="stat-label">م² مساحة إجمالية</div>
+                </div>
+                <div class="splash-stat">
+                    <div class="stat-number" data-target="85">0</div>
+                    <div class="stat-label">مشروع قائم</div>
+                </div>
+            </div>
+            <button class="splash-enter-btn" onclick="enterApp()">
+                <span>استكشف الفرص</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+            <div class="splash-loader">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+        <div class="splash-bg">
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+            <div class="bg-shape shape-3"></div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">جاري التحميل...</div>
+    </div>
+
+    <!-- Main App -->
+    <div id="mainApp" class="main-app" style="display: none;">
+    
+    <header class="app-header">
+        <div class="header-logos">
+            <img src="images/logo1.png" alt="" class="header-logo" />
+            <img src="images/logo2.png" alt="" class="header-logo" />
+            <img src="images/logo3.png" alt="" class="header-logo" />
+        </div>
+        <div class="brand">
+            <div class="titles">
+                <h1>خريطة الاستثمارات</h1>
+                <p>أمانة منطقة الحدود الشمالية - مدينة عرعر</p>
+            </div>
+        </div>
+        <div class="header-logos">
+            <img src="images/logo4.png" alt="" class="header-logo" />
+            <img src="images/logo5.png" alt="" class="header-logo" />
+        </div>
+    </header>
+    
+    <!-- Quick Stats Bar -->
+    <div class="quick-stats-bar">
+        <div class="quick-stat">
+            <div class="quick-stat-icon">📊</div>
+            <div class="quick-stat-content">
+                <div class="quick-stat-value" id="quickStatTotal">0</div>
+                <div class="quick-stat-label">إجمالي القطع</div>
+            </div>
+        </div>
+        <div class="quick-stat">
+            <div class="quick-stat-icon">✅</div>
+            <div class="quick-stat-content">
+                <div class="quick-stat-value" id="quickStatInvested">0</div>
+                <div class="quick-stat-label">مستثمر</div>
+            </div>
+        </div>
+        <div class="quick-stat">
+            <div class="quick-stat-icon">📐</div>
+            <div class="quick-stat-content">
+                <div class="quick-stat-value" id="quickStatArea">0</div>
+                <div class="quick-stat-label">م² إجمالي</div>
+            </div>
+        </div>
+        <div class="quick-stat">
+            <div class="quick-stat-icon">🎯</div>
+            <div class="quick-stat-content">
+                <div class="quick-stat-value" id="quickStatAvailable">0</div>
+                <div class="quick-stat-label">متاح للاستثمار</div>
+            </div>
+        </div>
+    </div>
+
+    <main class="layout">
+        <aside class="sidebar" aria-label="لوحة التحكم">
+            <!-- Search Bar -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 ابحث عن قطعة أرض..." />
+                <button class="search-btn" id="searchBtn">بحث</button>
+            </div>
+            
+            <section class="panel">
+                <h2>فلاتر البحث</h2>
+                <div class="field">
+                    <label for="districtSelect">الحي</label>
+                    <select id="districtSelect">
+                        <option value="all">الكل</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>الحالة الاستثمارية</label>
+                    <div class="segmented" role="group" aria-label="investment status">
+                        <button class="seg active" data-status="all" id="segStatusAll">الكل</button>
+                        <button class="seg" data-status="مستثمر">مستثمر</button>
+                        <button class="seg" data-status="غير مستثمر">غير مستثمر</button>
+                        <button class="seg" data-status="قيد الطرح">قيد الطرح</button>
+                    </div>
+                    <select id="statusSelect" hidden>
+                        <option value="all" selected>الكل</option>
+                        <option value="مستثمر">مستثمر</option>
+                        <option value="غير مستثمر">غير مستثمر</option>
+                        <option value="قيد الطرح">قيد الطرح</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>نوع المشروع</label>
+                    <div class="segmented" role="group" aria-label="project type">
+                        <button class="seg active" data-type="all">الكل</button>
+                        <button class="seg" data-type="كبري">كبري</button>
+                        <button class="seg" data-type="ناشئة">ناشئة</button>
+                        <button class="seg" data-type="متوسطة">متوسطة</button>
+                        <button class="seg" data-type="مشاريع الخصخصة">مشاريع الخصخصة</button>
+                    </div>
+                    <select id="typeSelect" hidden>
+                        <option value="all" selected>الكل</option>
+                        <option value="كبري">كبري</option>
+                        <option value="ناشئة">ناشئة</option>
+                        <option value="متوسطة">متوسطة</option>
+                        <option value="مشاريع الخصخصة">مشاريع الخصخصة</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>المساحة (م²)</label>
+                    <div class="range-rows">
+                        <div class="range-row">
+                            <input id="areaMinRange" type="range" min="0" max="100000" step="500" value="0" />
+                            <div class="range-value">من: <span id="areaMinVal">0</span></div>
+                        </div>
+                        <div class="range-row">
+                            <input id="areaMaxRange" type="range" min="0" max="100000" step="500" value="100000" />
+                            <div class="range-value">إلى: <span id="areaMaxVal">100,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="applyFilters" class="btn primary">تطبيق الفلاتر</button>
+                    <button id="resetFilters" class="btn ghost">إعادة ضبط</button>
+                </div>
+            </section>
+
+            <section class="panel stats">
+                <h2>ملخص النتائج</h2>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="label">عدد القطع</div>
+                        <div class="value" id="statCount">0</div>
+                    </div>
+                    <div class="stat">
+                        <div class="label">إجمالي المساحة</div>
+                        <div class="value" id="statArea">0 م²</div>
+                    </div>
+                    <div class="stat">
+                        <div class="label">استثماري</div>
+                        <div class="value" id="statInvestment">0</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel legend">
+                <h2>المخطط التوضيحي</h2>
+                <ul>
+                    <li><span class="key swatch invested"></span> مستثمر</li>
+                    <li><span class="key swatch not-invested"></span> غير مستثمر</li>
+                    <li><span class="key swatch pending"></span> قيد الطرح</li>
+                </ul>
+            </section>
+
+            <section class="panel district-charts" id="districtCharts" style="display: none;">
+                <h2>إحصائيات الحي</h2>
+                <div class="chart-container">
+                    <h3>حالة الاستثمار</h3>
+                    <canvas id="investmentChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>نوع المشروع السائد</h3>
+                    <canvas id="projectTypeChart"></canvas>
+                </div>
+            </section>
+        </aside>
+
+        <section class="map-wrap">
+            <div id="map" role="region" aria-label="خريطة مدينة عرعر"></div>
+            
+            <!-- Floating Action Buttons -->
+            <div class="floating-actions">
+                <button class="fab" id="recenterBtn" title="العودة لمركز المدينة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </button>
+                <button class="fab" id="fullscreenBtn" title="ملء الشاشة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="floating-card" id="infoCard" aria-live="polite">
+                <div class="card-header">
+                    <div class="card-icon">🏗️</div>
+                    <div class="card-title" id="infoTitle">تفاصيل قطعة الأرض</div>
+                </div>
+                <div class="card-body">
+                    <div class="line"><span>رقم القطعة</span><strong id="infoPlotNumber">—</strong></div>
+                    <div class="line"><span>رقم المخطط</span><strong id="infoPlanNumber">—</strong></div>
+                    <div class="line"><span>الحي</span><strong id="infoDistrict">—</strong></div>
+                    <div class="line"><span>الحالة</span><strong id="infoStatus">—</strong></div>
+                    <div class="line"><span>المساحة</span><strong id="infoArea">—</strong></div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn ghost small" id="downloadBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                        </svg>
+                        تحميل بروشور
+                    </button>
+                    <button class="btn ghost small" id="shareBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                            <path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/>
+                        </svg>
+                        مشاركة
+                    </button>
+                </div>
+                <div class="card-body" id="infoImages" aria-label="صور قطعة الأرض">
+
+                </div>
+            </div>
+            <div id="imageViewer" class="image-viewer" aria-hidden="true">
+                <img id="viewerImg" alt="صورة قطعة الأرض" />
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="footer-section">
+            <div class="footer-logo">🏛️</div>
+            <div class="footer-text">
+                <strong>أمانة منطقة الحدود الشمالية</strong>
+                <span>مدينة عرعر</span>
+            </div>
+        </div>
+        <div class="footer-section">
+            <span class="footer-badge">Cityscape Global 2025</span>
+        </div>
+        <div class="footer-section footer-links">
+            <a href="#" class="footer-link">📞 تواصل معنا</a>
+            <a href="#" class="footer-link">📧 البريد الإلكتروني</a>
+            <a href="#" class="footer-link">🌐 الموقع الرسمي</a>
+        </div>
+    </footer>
+    </div>
+    <!-- End Main App -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="data/plots.js"></script>
+    <script src="app.js"></script>
+    <script src="splash.js"></script>
+</body>
+
+</html>
