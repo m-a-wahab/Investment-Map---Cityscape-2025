@@ -204,8 +204,6 @@ const ARAR_CENTER = [LAT, LNG];
 ---
 
 <div align="center">
-  <strong>صُنع بـ ❤️ في المملكة العربية السعودية</strong>
-  <br>
   <sub>Cityscape Global 2025</sub>
 </div>
 =======
