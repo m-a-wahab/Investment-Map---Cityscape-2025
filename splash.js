@@ -42,34 +42,33 @@ function enterApp() {
     
     // Trigger map resize and zoom animation
     setTimeout(() => {
-      if (window.investmentMap && window.ARAR_CENTER) {
-        // First resize
-        window.investmentMap.invalidateSize();
-        console.log('Map invalidated');
+      if (window.investmentMap && window.ARAR_CENTER && typeof google !== 'undefined') {
+        // Trigger resize event for Google Maps
+        google.maps.event.trigger(window.investmentMap, 'resize');
+        console.log('Map resized');
         
-        // Then zoom out and zoom in for dramatic effect
-        window.investmentMap.setZoom(11, { animate: false });
+        // Set initial zoom out
+        window.investmentMap.setZoom(11);
         
+        // Then zoom in with animation
         setTimeout(() => {
-          window.investmentMap.flyTo(window.ARAR_CENTER, 13, {
-            duration: 2.0,
-            easeLinearity: 0.25
-          });
-          console.log('Flying to Arar city');
+          window.investmentMap.panTo({ lat: window.ARAR_CENTER[0], lng: window.ARAR_CENTER[1] });
+          window.investmentMap.setZoom(13);
+          console.log('Zooming to Arar city');
         }, 100);
       }
     }, 200);
     
     // Additional resize attempts to ensure map displays correctly
     setTimeout(() => {
-      if (window.investmentMap) {
-        window.investmentMap.invalidateSize();
+      if (window.investmentMap && typeof google !== 'undefined') {
+        google.maps.event.trigger(window.investmentMap, 'resize');
       }
     }, 500);
     
     setTimeout(() => {
-      if (window.investmentMap) {
-        window.investmentMap.invalidateSize();
+      if (window.investmentMap && typeof google !== 'undefined') {
+        google.maps.event.trigger(window.investmentMap, 'resize');
       }
     }, 1000);
   }, 500);

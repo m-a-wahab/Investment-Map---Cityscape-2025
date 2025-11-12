@@ -154,6 +154,7 @@ body {
   flex: 1 1 auto;
   overflow: hidden;
   min-height: 0;
+  height: calc(100vh - 230px);
 }
 
 .sidebar {
@@ -407,9 +408,9 @@ select option:checked {
 .legend ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .legend .key { display: inline-block; margin-left: 8px; vertical-align: middle; }
 .legend .swatch { width: 16px; height: 12px; border-radius: 4px; }
-.legend .swatch.invested { background: rgba(220, 53, 69, 0.7); border: 1px solid #dc3545; }
+.legend .swatch.invested { background: rgba(46, 134, 171, 0.7); border: 1px solid #2E86AB; }
 .legend .swatch.not-invested { background: rgba(40, 167, 69, 0.7); border: 1px solid #28a745; }
-.legend .swatch.pending { background: rgba(255, 193, 7, 0.7); border: 1px solid #ffc107; }
+.legend .swatch.pending { background: rgba(247, 127, 0, 0.7); border: 1px solid #F77F00; }
 
 /* District Charts */
 .district-charts { animation: slideIn 0.3s ease-out; }
@@ -425,7 +426,7 @@ select option:checked {
 /* Floating Action Buttons */
 .floating-actions {
   position: absolute;
-  bottom: 30px;
+  bottom: 80px;
   left: 20px;
   z-index: 600;
   display: flex;
@@ -590,8 +591,48 @@ select option:checked {
 .image-viewer img { max-width:95vw; max-height:95vh; border-radius:14px; box-shadow: var(--shadow); cursor: zoom-out; }
 .map-mini { position:absolute !important; top:16px !important; left:16px !important; width:320px !important; height:220px !important; border:2px solid var(--panel-stroke); border-radius:12px; overflow:hidden; z-index:650; }
 
+/* WhatsApp share button */
+.whatsapp-share-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.whatsapp-share-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+  background: #128C7E;
+}
+
+.whatsapp-share-btn:active {
+  transform: scale(0.95);
+}
+
+.whatsapp-share-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+  display: block;
+}
+
 /* Footer */
 .app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -601,6 +642,7 @@ select option:checked {
   background: linear-gradient(0deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
   backdrop-filter: blur(10px);
   flex-shrink: 0;
+  z-index: 100;
 }
 
 .footer-section {
@@ -665,6 +707,88 @@ select option:checked {
 .leaflet-control-attribution { background: rgba(255,255,255,0.8) !important; color: #4a4f55; }
 .leaflet-control-zoom a { color: #0b0c0f; background: #ffffff; border: 1px solid #dfe3e6; }
 .leaflet-control-zoom a:hover { background: #f4f6f7; }
+
+/* Custom Layer Toggle Card */
+.layer-toggle-card {
+  background: linear-gradient(180deg, rgba(12,20,18,0.95), rgba(8,12,11,0.90));
+  border: 1px solid var(--panel-stroke);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  backdrop-filter: blur(20px);
+  padding: 8px;
+  min-width: 180px;
+  animation: slideInFromLeft 0.5s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin: 4px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.toggle-option:hover {
+  background: rgba(0, 168, 107, 0.1);
+  border-color: rgba(0, 168, 107, 0.3);
+  transform: translateX(-3px);
+}
+
+.toggle-option.active {
+  background: linear-gradient(135deg, rgba(0,108,53,0.25), rgba(0,168,107,0.15));
+  border-color: rgba(0, 168, 107, 0.5);
+}
+
+.toggle-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.toggle-label {
+  flex: 1;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.toggle-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--panel-stroke);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: transparent;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-option.active .toggle-check {
+  background: var(--gradient-1);
+  border-color: var(--success);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 168, 107, 0.4);
+}
 /* Plot polygon glow */
 .plot-shape { filter: drop-shadow(0 0 3px rgba(0,0,0,0.3)); transition: filter 0.2s ease, opacity 0.2s ease; }
 .plot-shape:hover { filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
@@ -1062,4 +1186,136 @@ select option:checked {
     opacity: 0;
     visibility: hidden;
   }
+}
+
+/* Marker Animations */
+@keyframes markerGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(0, 168, 107, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(0, 168, 107, 1));
+  }
+}
+
+@keyframes markerPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Custom marker styles for enhanced effects */
+.gm-style .gm-style-iw-c {
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+.gm-style .gm-style-iw-d {
+  color: var(--text);
+}
+
+/* Enhanced marker container for animations */
+.marker-enhanced {
+  animation: markerGlow 2s ease-in-out infinite;
+}
+
+.marker-selected {
+  animation: markerPulse 1s ease-in-out infinite;
+}
+
+/* Info card animations */
+@keyframes cardSlideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) translateY(30px);
+    filter: blur(2px);
+  }
+  30% {
+    opacity: 0.5;
+    transform: scale(0.8) translateY(-20px);
+    filter: blur(1px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-10px);
+    filter: blur(0px);
+    box-shadow: 0 25px 80px rgba(0, 168, 107, 0.6);
+  }
+  80% {
+    transform: scale(0.95) translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 168, 107, 0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+}
+
+@keyframes cardBounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -15px, 0);
+  }
+  70% {
+    transform: translate3d(0, -7px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes cardGlow {
+  0%, 100% {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 0 rgba(0, 168, 107, 0.4);
+  }
+  50% {
+    box-shadow: 0 25px 80px rgba(0,0,0,0.6), 0 0 30px 10px rgba(0, 168, 107, 0.6);
+  }
+}
+
+@keyframes cardAttention {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(1deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-1deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(0.5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.floating-card {
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-card.card-appear {
+  animation: cardSlideIn 1.2s ease-out forwards;
+}
+
+.floating-card.card-bounce {
+  animation: cardBounce 0.8s ease-out;
+}
+
+.floating-card.card-glow {
+  animation: cardGlow 2s ease-in-out infinite;
+}
+
+.floating-card.card-attention {
+  animation: cardAttention 0.8s ease-out;
 }

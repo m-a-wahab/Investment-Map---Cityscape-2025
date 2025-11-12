@@ -1,858 +1,1325 @@
-/* Mock GeoJSON plots around Arar (approximate squares for demo purposes) */
+/* GeoJSON plots generated from investment_opportunities_data.xlsx */
 const PLOTS_GEOJSON = {
   "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
       "properties": {
-        "name": "قطعة A-1",
-        "plotNumber": "A-1",
-        "planNumber": "خ-102",
-        "district": "المساعدية",
-        "investmentStatus": "مستثمر",
-        "projectType": "كبري",
-        "area": 42000,
-        "images": ["https://picsum.photos/seed/a1/200/120","https://picsum.photos/seed/a12/200/120"]
+        "name": "نادي سيارات كارتينج",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 50000.0,
+        "buckletPrice": 0,
+        "activity": "ترفيهي ",
+        "district": "",
+        "googleMapLink": "https://maps.app.goo.gl/sCU6swqohuLJCZFA6",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/نادي سيارات.jpg"]
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0120809,
-            30.9746839
-          ],
-          [
-            41.0104126,
-            30.975521
-          ],
-          [
-            41.0092807,
-            30.9737226
-          ],
-          [
-            41.0102946,
-            30.9732305
-          ],
-          [
-            41.0120809,
-            30.9746839
-          ]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          40.874975,
+          31.036155
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "مبنى F-9",
-        "plotNumber": "F-9",
-        "planNumber": "خ-221",
-        "district": "المساعدية",
-        "investmentStatus": "قيد الطرح",
-        "projectType": "ناشئة",
-        "area": 9800,
-        "images": ["https://picsum.photos/seed/f9/200/120"]
+        "name": "مجمع خدمات لوجيستي 1",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 3500000.0,
+        "buckletPrice": 0,
+        "activity": "لوجيستي",
+        "district": "طريق جديدة",
+        "googleMapLink": "https://maps.app.goo.gl/EQANax3pYtTYs7P7A",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مجمع خدمات لوجيستي 1.jpg"]
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0107934,
-            30.9761051
-          ],
-          [
-            41.0105896,
-            30.9761741
-          ],
-          [
-            41.0093933,
-            30.9764271
-          ],
-          [
-            41.0090607,
-            30.9758522
-          ],
-          [
-            41.0102785,
-            30.975314
-          ],
-          [
-            41.0107934,
-            30.9761051
-          ]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          41.3584618,
+          31.1326111
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "مجمع G-5",
-        "plotNumber": "G-5",
-        "planNumber": "خ-330",
-        "district": "الفيصلية",
-        "investmentStatus": "مستثمر",
-        "projectType": "كبري",
-        "area": 52000,
-        "images": ["https://picsum.photos/seed/g5/200/120","https://picsum.photos/seed/g52/200/120","https://picsum.photos/seed/g53/200/120"]
+        "name": "مجمع خدمات لوجيستي 2",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 200000.0,
+        "buckletPrice": 0,
+        "activity": "لوجيستي",
+        "district": "حزم الجلاميد",
+        "googleMapLink": "https://maps.app.goo.gl/g9fwxgjPgamFeY1T7",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مجمع خدمات لوجستي 2.jpg"]
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0362637,
-            30.9821094
-          ],
-          [
-            41.0356924,
-            30.9811896
-          ],
-          [
-            41.0361671,
-            30.9809366
-          ],
-          [
-            41.036776,
-            30.9818495
-          ],
-          [
-            41.0362637,
-            30.9821094
-          ]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          40.092941,
+          31.283954
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "مبنى H-11",
-        "plotNumber": "H-11",
-        "planNumber": "خ-419",
-        "district": "الفيصلية",
-        "investmentStatus": "غير مستثمر",
-        "projectType": "متوسطة",
-        "area": 7600,
-        "images": []
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0342641,
-            30.9792234
-          ],
-          [
-            41.0337183,
-            30.9794902
-          ],
-          [
-            41.0331711,
-            30.9786071
-          ],
-          [
-            41.0336895,
-            30.9783197
-          ],
-          [
-            41.0342641,
-            30.9792234
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "مركز I-2",
-        "plotNumber": "I-2",
-        "planNumber": "خ-504",
-        "district": "الناصرية",
-        "investmentStatus": "مستثمر",
-        "projectType": "مشاريع الخصخصة",
-        "area": 74000,
-        "images": ["https://picsum.photos/seed/i2/200/120"]
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0415155,
-            30.9624487
-          ],
-          [
-            41.0408771,
-            30.9627638
-          ],
-          [
-            41.0404828,
-            30.962152
-          ],
-          [
-            41.0411534,
-            30.961823
-          ],
-          [
-            41.0415155,
-            30.9624487
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة J-6",
-        "plotNumber": "J-6",
-        "planNumber": "خ-612",
-        "district": "الناصرية",
-        "investmentStatus": "غير مستثمر",
-        "projectType": "كبري",
-        "area": 29000,
-        "images": []
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0395011,
-            30.9626626
-          ],
-          [
-            41.0389405,
-            30.9617977
-          ],
-          [
-            41.0394153,
-            30.9615815
-          ],
-          [
-            41.0400027,
-            30.9623912
-          ],
-          [
-            41.0395011,
-            30.9626626
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة B-2",
-        "plotNumber": "B-2",
-        "planNumber": "خ-720",
-        "district": "بدنه",
-        "investmentStatus": "غير مستثمر",
-        "projectType": "ناشئة",
-        "area": 8500,
-        "images": ["https://picsum.photos/seed/b2/200/120"]
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            40.9992573,
-            30.9841697
-          ],
-          [
-            40.9991446,
-            30.9842088
-          ],
-          [
-            40.998989,
-            30.9838501
-          ],
-          [
-            40.9986699,
-            30.9839375
-          ],
-          [
-            40.998348,
-            30.9831005
-          ],
-          [
-            40.9987879,
-            30.982974
-          ],
-          [
-            40.9992573,
-            30.9841697
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة C-7",
-        "plotNumber": "C-7",
-        "planNumber": "خ-831",
-        "district": "بدنه",
-        "investmentStatus": "مستثمر",
-        "projectType": "متوسطة",
-        "area": 12000,
-        "images": []
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            40.9992519,
-            30.9812861
-          ],
-          [
-            40.998238,
-            30.9815943
-          ],
-          [
-            40.9978357,
-            30.9806906
-          ],
-          [
-            40.9982809,
-            30.9805733
-          ],
-          [
-            40.9983426,
-            30.980732
-          ],
-          [
-            40.9987772,
-            30.9806078
-          ],
-          [
-            40.99893,
-            30.9809458
-          ],
-          [
-            40.9991017,
-            30.9809113
-          ],
-          [
-            40.9992519,
-            30.9812861
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة D-4",
-        "plotNumber": "D-4",
-        "planNumber": "خ-940",
-        "district": "الجوهرة",
-        "investmentStatus": "مستثمر",
-        "projectType": "كبري",
-        "area": 65000,
-        "images": ["https://picsum.photos/seed/d4/200/120"]
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0082856,
-            30.950711
-          ],
-          [
-            41.0071081,
-            30.9511734
-          ],
-          [
-            41.0060567,
-            30.9492066
-          ],
-          [
-            41.0072261,
-            30.9487442
-          ],
-          [
-            41.0082856,
-            30.950711
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة E-3",
-        "plotNumber": "E-3",
-        "planNumber": "خ-1010",
-        "district": "الجوهرة",
-        "investmentStatus": "غير مستثمر",
-        "projectType": "متوسطة",
-        "area": 33000,
-        "images": []
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0094604,
-            30.9485694
-          ],
-          [
-            41.0091573,
-            30.9479713
-          ],
-          [
-            41.0106003,
-            30.9473824
-          ],
-          [
-            41.0110965,
-            30.9479115
-          ],
-          [
-            41.0094604,
-            30.9485694
-          ]
-        ]]
-      }
-    },
-
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة A-200",
-        "plotNumber": "A-200",
-        "planNumber": "خ-102",
-        "district": "المروج",
-        "investmentStatus": "مستثمر",
-        "projectType": "كبري",
-        "area": 41000,
-        "images": ["https://picsum.photos/seed/a1/200/120","https://picsum.photos/seed/a12/200/120"]
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0755742,
-            31.0114814
-          ],
-          [
-            41.0757244,
-            31.0103596
-          ],
-          [
-            41.0781491,
-            31.0088331
-          ],
-          [
-            41.0795224,
-            31.0090078
-          ],
-          [
-            41.0793185,
-            31.0099366
-          ],
-          [
-            41.0768509,
-            31.0115458
-          ],
-          [
-            41.0755742,
-            31.0114814
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "مبنى F-977",
-        "plotNumber": "F-977",
-        "planNumber": "خ-221",
-        "district": "البروج",
-        "investmentStatus": "قيد الطرح",
-        "projectType": "ناشئة",
-        "area": 9800,
-        "images": ["https://picsum.photos/seed/f9/200/120"]
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0866624,
-            31.0114239
-          ],
-          [
-            41.084066,
-            31.0111136
-          ],
-          [
-            41.0842484,
-            31.0099228
-          ],
-          [
-            41.0851765,
-            31.0093412
-          ],
-          [
-            41.0862547,
-            31.0094768
-          ],
-          [
-            41.0868636,
-            31.0102814
-          ],
-          [
-            41.0866624,
-            31.0114239
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "مجمع G-588",
-        "plotNumber": "G-588",
-        "planNumber": "خ-330",
+        "name": "مدينة ألاثاث والغذاء",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 120000.0,
+        "buckletPrice": 0,
+        "activity": "تجاري",
         "district": "الربوة",
-        "investmentStatus": "مستثمر",
-        "projectType": "كبري",
-        "area": 52000,
-        "images": ["https://picsum.photos/seed/g5/200/120","https://picsum.photos/seed/g52/200/120","https://picsum.photos/seed/g53/200/120"]
+        "googleMapLink": "https://maps.app.goo.gl/dfhGZkA1mKD7ufB36",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مدينة ألاثاث والغذاء.jpg"]
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0540843,
-            31.0000418
-          ],
-          [
-            41.0532367,
-            31.0004326
-          ],
-          [
-            41.0527271,
-            30.9997337
-          ],
-          [
-            41.0524535,
-            30.9992693
-          ],
-          [
-            41.0533118,
-            30.9988508
-          ],
-          [
-            41.0540843,
-            31.0000418
-          ]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          41.041355,
+          31.005721
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "مبنى H-1122",
-        "plotNumber": "H-1122",
-        "planNumber": "خ-419",
+        "name": "نادي الفروسية ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 50000.0,
+        "buckletPrice": 0,
+        "activity": "ترفيهي ",
+        "district": "خارج حدود الأحياء ( طريق سكاكا ) ",
+        "googleMapLink": "https://maps.app.goo.gl/kj1qbvmPWPi9WTCy8",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/نادي الفروسية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.967201,
+          30.912703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "نادي الرماية  ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 30000.0,
+        "buckletPrice": 0,
+        "activity": "ترفيهي ",
+        "district": "حي الصقار شرقاً ",
+        "googleMapLink": "https://maps.app.goo.gl/BWhMShYYP7MjgXAw9",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/نادي الرماية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.08842,
+          31.026671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "فندق منتجع 5 نجوم",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 40400.0,
+        "buckletPrice": 0,
+        "activity": "سياحي",
+        "district": "حي الخليج العربي الشرقي",
+        "googleMapLink": "https://umaps.balady.gov.sa?q=30.91600068153934,41.08481854727792 ",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/فندق منتجع 5 نجوم.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.08481854727792,
+          30.91600068153934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مجمع سكني تجاري ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 24449.38,
+        "buckletPrice": 0,
+        "activity": "تجاري",
+        "district": "حي البساتين الإداري الغربي",
+        "googleMapLink": "https://maps.app.goo.gl/SVpJoRjipUJ1crRf9",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مجمع سكني تجاري.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.953053,
+          30.984008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مركز المعارض والمؤتمرات",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 243870.24,
+        "buckletPrice": 0,
+        "activity": "اجتماعي",
+        "district": "خارج حدود الأحياء",
+        "googleMapLink": "https://share.google/eZoXLd9bEbPk8WVaj",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مركز المعارض والمؤتمرات.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.953056,
+          30.992778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مجمع الصناعات الخفيفة ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 280000.0,
+        "buckletPrice": 0,
+        "activity": "صناعي",
+        "district": "الصناعية الثانية",
+        "googleMapLink": "https://maps.app.goo.gl/fCD8fxwdk4rcpCBf6",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مجمع الصناعات الخفيفة.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.918244,
+          31.006837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مجمع المستودعات  ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 250000.0,
+        "buckletPrice": 0,
+        "activity": "لوجيستي",
+        "district": "الصناعية الثانية",
+        "googleMapLink": "https://maps.app.goo.gl/uYAZAPYBbUC6KQsD9",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مجمع المستودعات.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.903211,
+          31.007765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مجمع الورش النوعية ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 850000.0,
+        "buckletPrice": 0,
+        "activity": "صناعي",
+        "district": "الصناعية الثانية",
+        "googleMapLink": "https://maps.app.goo.gl/uiG1hkKPKaa8PGKw8",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مجمع الورش النوعية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.912346,
+          31.005254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "سوق النجاريين",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 38600.0,
+        "buckletPrice": 0,
+        "activity": "حرفي",
+        "district": "هواة بيع الصقور",
+        "googleMapLink": "https://maps.app.goo.gl/5QaSix7J8DkueEq79",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/سوق النجاريين.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.062889,
+          31.018179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مدينة طبية",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 17871.0,
+        "buckletPrice": 0,
+        "activity": "طبي",
+        "district": "اشبيلية",
+        "googleMapLink": "https://maps.app.goo.gl/F8HfGwX6S39mVT7MA",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مدينة طبية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.99425,
+          31.00225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مدرسة عالمية ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 5792.0,
+        "buckletPrice": 0,
+        "activity": "تعليمي",
+        "district": "اشبيلية",
+        "googleMapLink": "https://maps.app.goo.gl/jEwNA5NiuAq77cwc9",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مدرسة عالمية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9919167,
+          30.9951111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "منتجع واحة عرعر الشتوية ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 100000.0,
+        "buckletPrice": 0,
+        "activity": "ترفيهي ",
+        "district": "خارج حدود الأحياء",
+        "googleMapLink": "https://maps.app.goo.gl/VDp1BJRFygrjkChM7",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/منتجع واحة عرعر الشتوية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.928658,
+          31.031719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "منتزه بيئي",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 50000.0,
+        "buckletPrice": 0,
+        "activity": "ترفيهي ",
+        "district": "خارج حدود الأحياء",
+        "googleMapLink": "https://maps.app.goo.gl/k1QdvPfn9ue7Rqys9",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/منتزه بيئي.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.758695,
+          31.06008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "حديقة ترفيهية ومجمع فود ترك",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 121750.0,
+        "buckletPrice": 0,
+        "activity": "ترفيهي تجاري",
+        "district": "حي البساتين الإداري الغربي",
+        "googleMapLink": "https://maps.app.goo.gl/a58zjt2aPw1xnRjB9",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/حديقة ترفيهية ومجمع فود ترك.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.98585,
+          30.971471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مجمع صناعات حربية ",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 5000000.0,
+        "buckletPrice": 0,
+        "activity": "صناعي",
+        "district": "خارج حدود الأحياء",
+        "googleMapLink": "https://maps.app.goo.gl/4MYMcQvyzmxDGWqB7",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مجمع صناعات حربية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.309441,
+          31.239849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "استراحة مسافرين",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 3030.542774,
+        "buckletPrice": 0,
+        "activity": "لوجيستي",
+        "district": "الصناعية طريق طريف",
+        "googleMapLink": "https://maps.app.goo.gl/KNxEGVVGL7QA5fJo8",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/استراحة مسافرين.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.94525,
+          30.9926389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "داون تاون عرعر",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 250000.0,
+        "buckletPrice": 0,
+        "activity": "تجاري",
+        "district": "الصناعية القديمة",
+        "googleMapLink": "https://maps.app.goo.gl/uFzCBDPFPUH1CKv36",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/داون تاون عرعر.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0252778,
+          30.9646944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "داون تاون رفحا",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 550000.0,
+        "buckletPrice": 0,
+        "activity": "تجاري",
+        "district": "الصناعية ",
+        "googleMapLink": "https://maps.app.goo.gl/EFydiNnfqeCyyXceA",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/داون تاون رفحا.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.5292755,
+          29.6123269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "داون تاون طريف",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 340000.0,
+        "buckletPrice": 0,
+        "activity": "تجاري",
+        "district": "اليرموك",
+        "googleMapLink": "https://maps.app.goo.gl/NQZf8o5ptoPjqGRcA",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        // "images": ["images/opportunities/داون تاون طريف.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.6666667,
+          31.6754722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "المدينة الصناعية برفحا",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 500000.0,
+        "buckletPrice": 0,
+        "activity": "صناعي",
+        "district": "",
+        "googleMapLink": "https://maps.app.goo.gl/9zmHMWRHipGGzcXA8",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/المدينة الصناعية برفحا.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.5168056,
+          29.65575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "المدينة الصناعية بطريف",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 400000.0,
+        "buckletPrice": 0,
+        "activity": "صناعي",
+        "district": "خارج حدود الأحياء",
+        "googleMapLink": "https://maps.app.goo.gl/QFdhbf72psX2MiHK6",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/المدينة الصناعية بطريف.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.6253056,
+          31.6503611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "كلية أهلية",
+        "plotNumber": "01-25-013001-48015",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 5282,
+        "buckletPrice": 3000.0,
+        "activity": "الأنشطة التعليمية",
+        "district": "حي اشبيلية الجنوبي",
+        "googleMapLink": "https://maps.app.goo.gl/nvKfS2hud7GR7THW7",
+        "advertiseDate": "2025-11-01",
+        "openEnvelopesDate": "2025-11-26",
+        "images": ["images/opportunities/كلية أهلية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9829697,
+          30.9920196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "حديقة عامة ",
+        "plotNumber": "01-25-013001-47001",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 65873.4,
+        "buckletPrice": 4000.0,
+        "activity": "الأنشطة الرياضية و الترفيهية",
+        "district": "حي الفيصلية",
+        "googleMapLink": "https://maps.app.goo.gl/bEsNyCmTvMibuorKA",
+        "advertiseDate": "2025-08-31",
+        "openEnvelopesDate": "2025-11-27",
+        "images": ["images/opportunities/1حديقة عامة.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0353333,
+          30.9917222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "حديقة عامة ",
+        "plotNumber": "01-25-013001-47002",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 7226.22,
+        "buckletPrice": 4000.0,
+        "activity": "الأنشطة الرياضية و الترفيهية",
         "district": "الربوة",
-        "investmentStatus": "غير مستثمر",
+        "googleMapLink": "https://maps.app.goo.gl/RwQ6oeCqHP8hTFnTA",
+        "advertiseDate": "2025-08-31",
+        "openEnvelopesDate": "2025-11-27",
+        "images": ["images/opportunities/2حديقة عامة.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0413056,
+          30.9910556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مدارس عالمية",
+        "plotNumber": "01-25-013001-48014",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 5792.42,
+        "buckletPrice": 3000.0,
+        "activity": "الأنشطة التعليمية",
+        "district": "حي اشبيلية الجنوبي",
+        "googleMapLink": "https://maps.app.goo.gl/Updv8xNRYcG73ipj6",
+        "advertiseDate": "2025-11-01",
+        "openEnvelopesDate": "2025-11-26",
+        "images": ["images/opportunities/مدارس عالمية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9930278,
+          30.9977222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "حديقة عامة ",
+        "plotNumber": "01-25-013001-47003",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 27127,
+        "buckletPrice": 4000.0,
+        "activity": "الأنشطة الرياضية و الترفيهية",
+        "district": "المساعدية",
+        "googleMapLink": "https://maps.app.goo.gl/6QGcj7otwbf5M2B1A",
+        "advertiseDate": "2025-08-31",
+        "openEnvelopesDate": "2025-11-27",
+        "images": ["images/opportunities/3حديقة عامة.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0138611,
+          30.9671667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "حديقة عامة ",
+        "plotNumber": "01-25-013001-46001",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 8374.52,
+        "buckletPrice": 4000.0,
+        "activity": "الأنشطة الرياضية و الترفيهية",
+        "district": "المساعدية",
+        "googleMapLink": "https://maps.app.goo.gl/AZB5AGtwkGP8qcfR7",
+        "advertiseDate": "2025-08-31",
+        "openEnvelopesDate": "2025-11-27",
+        "images": ["images/opportunities/4حديقة عامة.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0148611,
+          30.9760833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "اعلان يوني بول عدد (20 لوحات)",
+        "plotNumber": "01-25-013001-41002",
+        "projectType": "كبرى",
+        "contractPeriod": "10 سنوات",
+        "area": 0.0,
+        "buckletPrice": 4000.0,
+        "activity": "أنشطة الخدمات العامة",
+        "district": "مواقع متعددة",
+        "googleMapLink": "https://maps.app.goo.gl/6tFhxZPuAX8TFkHp7",
+        "advertiseDate": "2025-11-09",
+        "openEnvelopesDate": "2026-01-13",
+        "images": ["images/opportunities/اعلان يوني بول عدد (20 لوحات).jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0133683,
+          30.9554098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مدينة طبية",
+        "plotNumber": "01-25-013001-48017",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 17872,
+        "buckletPrice": 4000.0,
+        "activity": "الأنشطة الصحية",
+        "district": "حي اشبيلية الشمالية",
+        "googleMapLink": "https://maps.app.goo.gl/rAcvvZ1HZENyHUx19",
+        "advertiseDate": "2025-11-01",
+        "openEnvelopesDate": "2025-11-26",
+        "images": ["images/opportunities/مدينة طبية (2).jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9944167,
+          31.0027222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "شقق فندقية",
+        "plotNumber": "01-25-013001-48019",
         "projectType": "متوسطة",
-        "area": 7600,
-        "images": []
+        "contractPeriod": "25 سنة",
+        "area": 1909,
+        "buckletPrice": 3000.0,
+        "activity": "الأنشطة السياحية",
+        "district": "حي المورج",
+        "googleMapLink": "https://maps.app.goo.gl/FZ1TpRRQkFMjWzbL8",
+        "advertiseDate": "2025-11-01",
+        "openEnvelopesDate": "2025-11-26",
+        "images": ["images/opportunities/شقق فندقية1.jpg"]
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0522443,
-            30.9989566
-          ],
-          [
-            41.0513699,
-            30.999398
-          ],
-          [
-            41.0509193,
-            30.9987405
-          ],
-          [
-            41.0508576,
-            30.9987451
-          ],
-          [
-            41.0506001,
-            30.9983427
-          ],
-          [
-            41.0511258,
-            30.9981151
-          ],
-          [
-            41.051209,
-            30.9981519
-          ],
-          [
-            41.0515764,
-            30.9979932
-          ],
-          [
-            41.0516918,
-            30.99803
-          ],
-          [
-            41.0522443,
-            30.9989566
-          ]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          41.0794985,
+          31.010108
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "مركز I-233",
-        "plotNumber": "I-233",
-        "planNumber": "خ-504",
-        "district": "النسيم",
-        "investmentStatus": "مستثمر",
-        "projectType": "مشاريع الخصخصة",
-        "area": 74000,
-        "images": ["https://picsum.photos/seed/i2/200/120"]
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0593951,
-            30.9766248
-          ],
-          [
-            41.057952,
-            30.9772733
-          ],
-          [
-            41.0575873,
-            30.9767352
-          ],
-          [
-            41.0589391,
-            30.9760545
-          ],
-          [
-            41.0593951,
-            30.9766248
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة J-644",
-        "plotNumber": "J-644",
-        "planNumber": "خ-612",
-        "district": "النسيم",
-        "investmentStatus": "غير مستثمر",
-        "projectType": "كبري",
-        "area": 29000,
-        "images": []
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0572305,
-            30.9737801
-          ],
-          [
-            41.0568443,
-            30.9731822
-          ],
-          [
-            41.057539,
-            30.9728464
-          ],
-          [
-            41.0576785,
-            30.972805
-          ],
-          [
-            41.0578018,
-            30.9727337
-          ],
-          [
-            41.0582337,
-            30.9724095
-          ],
-          [
-            41.0587326,
-            30.9729177
-          ],
-          [
-            41.0581774,
-            30.9733179
-          ],
-          [
-            41.0572305,
-            30.9737801
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة B-266",
-        "plotNumber": "B-266",
-        "planNumber": "خ-720",
-        "district": "نسائم القدس",
-        "investmentStatus": "غير مستثمر",
-        "projectType": "ناشئة",
-        "area": 8500,
-        "images": ["https://picsum.photos/seed/b2/200/120"]
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.1022139,
-            31.0231219
-          ],
-          [
-            41.1014843,
-            31.0231449
-          ],
-          [
-            41.1012965,
-            31.0230438
-          ],
-          [
-            41.1011571,
-            31.0216876
-          ],
-          [
-            41.1020476,
-            31.0216371
-          ],
-          [
-            41.1022139,
-            31.0231219
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة C-777",
-        "plotNumber": "C-777",
-        "planNumber": "خ-831",
-        "district": "نسائم القدس",
-        "investmentStatus": "مستثمر",
+        "name": "شقق فندقية",
+        "plotNumber": "01-25-013001-57014",
         "projectType": "متوسطة",
-        "area": 12000,
-        "images": []
+        "contractPeriod": "25 سنة",
+        "area": 1755,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة السياحية",
+        "district": "حي النخيل",
+        "googleMapLink": "https://maps.app.goo.gl/iX9vszuQnLwRvMKq6",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/شقق فندقية2.jpg"]
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0937381,
-            31.0253285
-          ],
-          [
-            41.0936818,
-            31.02457
-          ],
-          [
-            41.0968146,
-            31.0243034
-          ],
-          [
-            41.0968843,
-            31.0250757
-          ],
-          [
-            41.0968119,
-            31.0251102
-          ],
-          [
-            41.0937381,
-            31.0253285
-          ]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          41.1092222,
+          30.9514444
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "قطعة D-499",
-        "plotNumber": "D-499",
-        "planNumber": "خ-940",
-        "district": "الجوهرة",
-        "investmentStatus": "مستثمر",
-        "projectType": "كبري",
-        "area": 65000,
-        "images": ["https://picsum.photos/seed/d4/200/120"]
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0039726,
-            30.9425193
-          ],
-          [
-            41.001564,
-            30.9424526
-          ],
-          [
-            41.0015801,
-            30.9420293
-          ],
-          [
-            41.0039994,
-            30.9421144
-          ],
-          [
-            41.0039726,
-            30.9425193
-          ]
-        ]]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "قطعة E-355",
-        "plotNumber": "E-355",
-        "planNumber": "خ-1010",
-        "district": "الجوهرة",
-        "investmentStatus": "غير مستثمر",
+        "name": "فندق سياحي وترفيهي",
+        "plotNumber": "01-25-013001-48018",
         "projectType": "متوسطة",
-        "area": 33000,
-        "images": []
+        "contractPeriod": "25 سنة",
+        "area": 4530,
+        "buckletPrice": 3000.0,
+        "activity": "الأنشطة السياحية",
+        "district": "حى المروج الشرقي",
+        "googleMapLink": "https://maps.app.goo.gl/r45QLsenPDkDNArf9",
+        "advertiseDate": "2025-11-01",
+        "openEnvelopesDate": "2025-11-26",
+        "images": ["images/opportunities/فندق سياحي وترفيهي.jpg"]
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [
-            41.0338765,
-            30.9661608
-          ],
-          [
-            41.0327017,
-            30.9667496
-          ],
-          [
-            41.0323477,
-            30.966193
-          ],
-          [
-            41.0335493,
-            30.9655996
-          ],
-          [
-            41.0338765,
-            30.9661608
-          ]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          41.0778333,
+          31.0131944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ورشة سيارات",
+        "plotNumber": "01-25-013001-57005",
+        "projectType": "متوسطة",
+        "contractPeriod": "15 سنة",
+        "area": 1445,
+        "buckletPrice": 1000.0,
+        "activity": "أنشطة المركبات",
+        "district": "الصناعية الأولى",
+        "googleMapLink": "https://maps.app.goo.gl/i7z7fJPE47jkK8uo8",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/ورشة سيارات.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.95,
+          30.9846111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مركز خدمة سيارات",
+        "plotNumber": "01-25-013001-57007",
+        "projectType": "متوسطة",
+        "contractPeriod": "20 سنة",
+        "area": 2909,
+        "buckletPrice": 1000.0,
+        "activity": "أنشطة المركبات",
+        "district": "حي البساتين",
+        "googleMapLink": "https://maps.app.goo.gl/QyWEp8ypywRqHQrG9",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/مركز خدمة سيارات.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9512222,
+          30.98425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "سوق تجاري",
+        "plotNumber": "01-25-013001-57009",
+        "projectType": "متوسطة",
+        "contractPeriod": "25 سنة",
+        "area": 3761,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة التجارية",
+        "district": "الصناعية الأولى",
+        "googleMapLink": "https://maps.app.goo.gl/1GZxTFQDUYuNYUVv5",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/سوق تجاري (2).jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9445713,
+          30.991888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "(اعلان شاشات (عدد 3 لوحات",
+        "plotNumber": "01-25-013001-41001",
+        "projectType": "متوسطة",
+        "contractPeriod": "10 سنوات",
+        "area": 0.0,
+        "buckletPrice": 4000.0,
+        "activity": "أنشطة الخدمات العامة",
+        "district": "مواقع متعددة",
+        "googleMapLink": "https://maps.app.goo.gl/hF1yiFL4cyU1R9eG7",
+        "advertiseDate": "2025-11-09",
+        "openEnvelopesDate": "2026-01-13",
+        "images": ["images/opportunities/اعلان شاشات (عدد 3 لوحات).jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0139353,
+          30.9507051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "اعلان يوني بول عدد (6 لوحات)",
+        "plotNumber": "01-25-013001-40001",
+        "projectType": "متوسطة",
+        "contractPeriod": "10 سنوات",
+        "area": 0.0,
+        "buckletPrice": 4000.0,
+        "activity": "أنشطة الخدمات العامة",
+        "district": "مواقع متعددة",
+        "googleMapLink": "https://maps.app.goo.gl/AVSymwVKM4H4UdMf9",
+        "advertiseDate": "2025-11-09",
+        "openEnvelopesDate": "2026-01-13",
+        "images": ["images/opportunities/اعلان يوني بول عدد (6 لوحات).jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0133253,
+          30.9664331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "سكن جماعي",
+        "plotNumber": "01-25-013001-57012",
+        "projectType": "متوسطة",
+        "contractPeriod": "25 سنة",
+        "area": 4000.0,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة الاجتماعية",
+        "district": "حي النخيل الجنوبي",
+        "googleMapLink": "https://maps.app.goo.gl/jHjCg1GQTxVcLRhw9",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/سكن جماعي (2).jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.1030556,
+          30.9386944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مدينة طبية",
+        "plotNumber": "",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 17871.0,
+        "buckletPrice": 0,
+        "activity": "طبي",
+        "district": "اشبيلية",
+        "googleMapLink": "https://maps.app.goo.gl/F8HfGwX6S39mVT7MA",
+        "advertiseDate": "",
+        "openEnvelopesDate": "",
+        "images": ["images/opportunities/مدينة طبية.jpg"] 
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.99425,
+          31.00225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مبنى متعدد الاستخدام",
+        "plotNumber": "01-25-013001-58001",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 2535.0,
+        "buckletPrice": 3000.0,
+        "activity": "الأنشطة التجارية",
+        "district": "حي الخليج العربي",
+        "googleMapLink": "https://maps.app.goo.gl/7TeLm7Ee5jUsAMHt7",
+        "advertiseDate": "2025-11-09",
+        "openEnvelopesDate": "2026-01-12",
+        "images": ["images/opportunities/مبنى متعدد الاستخدام.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0839722,
+          30.9183889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "منتجع سياحي تجاري",
+        "plotNumber": "01-25-013001-58002",
+        "projectType": "كبرى",
+        "contractPeriod": "25 سنة",
+        "area": 7470.0,
+        "buckletPrice": 3000.0,
+        "activity": "الأنشطة السياحية",
+        "district": "حي الروابي",
+        "googleMapLink": "https://maps.app.goo.gl/tSyR9dfdwz4mvcxRA",
+        "advertiseDate": "2025-11-09",
+        "openEnvelopesDate": "2026-01-12",
+        "images": ["images/opportunities/منتجع سياحي تجاري.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0908056,
+          31.0183333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "نقليات",
+        "plotNumber": "01-25-013001-57003",
+        "projectType": "متوسطة",
+        "contractPeriod": "15 سنة",
+        "area": 6003.0,
+        "buckletPrice": 1000.0,
+        "activity": "أنشطة النقل",
+        "district": "حي الشامل",
+        "googleMapLink": "https://maps.app.goo.gl/7UdACgGsbJ2GcSja6",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/نقليات 1.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9477222,
+          30.9990278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "سوق تجاري",
+        "plotNumber": "01-25-013001-57018",
+        "projectType": "متوسطة",
+        "contractPeriod": "25 سنة",
+        "area": 7432.0,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة التجارية",
+        "district": "حي المروج الشرقى",
+        "googleMapLink": "https://maps.app.goo.gl/971P8tHFrQy5mQiT6",
+        "advertiseDate": "2025-11-09",
+        "openEnvelopesDate": "2026-01-12",
+        "images": ["images/opportunities/سوق تجاري.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0802778,
+          31.0131389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "نقليات",
+        "plotNumber": "01-25-013001-57004",
+        "projectType": "متوسطة",
+        "contractPeriod": "15 سنة",
+        "area": 4350.0,
+        "buckletPrice": 1000.0,
+        "activity": "أنشطة النقل",
+        "district": "حي الشامل",
+        "googleMapLink": "https://maps.app.goo.gl/5GsG6F1Eog4hnJGT9",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/2نقليات.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9480278,
+          31.0004167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "روضة أطفال",
+        "plotNumber": "01-25-013001-57019",
+        "projectType": "متوسطة",
+        "contractPeriod": "25 سنة",
+        "area": 1824.0,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة التعليمية",
+        "district": "حي المطار",
+        "googleMapLink": "https://maps.app.goo.gl/J5YksmgvAUve5GXu8",
+        "advertiseDate": "2025-11-09",
+        "openEnvelopesDate": "2026-01-12",
+        "images": ["images/opportunities/روضة أطفال.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9908333,
+          30.9845833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ورشة سيارات",
+        "plotNumber": "01-25-013001-57006",
+        "projectType": "متوسطة",
+        "contractPeriod": "16 سنة",
+        "area": 450.0,
+        "buckletPrice": 1000.0,
+        "activity": "أنشطة المركبات",
+        "district": "الصناعية الأولى",
+        "googleMapLink": "https://maps.app.goo.gl/2iFdTNXLuMZcLtfY8",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/2ورشة سيارات.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9422743,
+          30.9872867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "نادي رياضي",
+        "plotNumber": "01-25-013001-57015",
+        "projectType": "متوسطة",
+        "contractPeriod": "25 سنة",
+        "area": 5588.0,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة الرياضية و الترفيهية",
+        "district": "حي الشذى",
+        "googleMapLink": "https://maps.app.goo.gl/NKkYw7NxvBvp563M8",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/نادي رياضي.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.032,
+          30.9985833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "مجمع تجاري مخصص لبيع قطع غيارالسيارات",
+        "plotNumber": "01-25-013001-57008",
+        "projectType": "متوسطة",
+        "contractPeriod": "21 سنة",
+        "area": 2916.0,
+        "buckletPrice": 1000.0,
+        "activity": "أنشطة المركبات",
+        "district": "حي البساتين",
+        "googleMapLink": "https://maps.app.goo.gl/HqPH3o9YCc2gvQZM9",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/مجمع تجاري مخصص لبيع قطع غيارالسيارات.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.95125,
+          30.9841389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "محلات تجارية",
+        "plotNumber": "01-25-013001-57010",
+        "projectType": "متوسطة",
+        "contractPeriod": "25 سنة",
+        "area": 932.0,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة التجارية",
+        "district": "الصناعية الأولى",
+        "googleMapLink": "https://maps.app.goo.gl/YMvNkJt4Jigb2nTW8",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/محلات تجارية.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.9437222,
+          30.9887778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "سكن جماعي",
+        "plotNumber": "01-25-013001-57011",
+        "projectType": "متوسطة",
+        "contractPeriod": "25 سنة",
+        "area": 7232.0,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة الاجتماعية",
+        "district": "حي القدس",
+        "googleMapLink": "https://maps.app.goo.gl/LMziUiZfLNXzfSjB7",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/سكن جماعي.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.1231389,
+          31.0349444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "محطة محروقات - فئة ب",
+        "plotNumber": "01-25-013001-57013",
+        "projectType": "متوسطة",
+        "contractPeriod": "25 سنة",
+        "area": 4340.0,
+        "buckletPrice": 2000.0,
+        "activity": "الأنشطة التجارية",
+        "district": "حي المطار",
+        "googleMapLink": "https://maps.app.goo.gl/LMziUiZfLNXzfSjB7",
+        "advertiseDate": "2025-11-08",
+        "openEnvelopesDate": "2026-01-07",
+        "images": ["images/opportunities/محطة محروقات - فئة ب.jpg"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.981871,
+          30.985566
+        ]
       }
     }
   ]
