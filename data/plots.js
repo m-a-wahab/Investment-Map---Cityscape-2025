@@ -12,7 +12,7 @@ const PLOTS_GEOJSON = {
         "area": 50000.0,
         "buckletPrice": 0,
         "activity": "ترفيهي ",
-        "district": "",
+        "district": "خارج حدود الأحياء",
         "googleMapLink": "https://maps.app.goo.gl/sCU6swqohuLJCZFA6",
         "advertiseDate": "",
         "openEnvelopesDate": "",
@@ -29,7 +29,7 @@ const PLOTS_GEOJSON = {
     {
       "type": "Feature",
       "properties": {
-        "name": "مجمع خدمات لوجيستي 1",
+        "name": "مجمع خدمات لوجيستي حدودي",
         "plotNumber": "",
         "projectType": "كبرى",
         "contractPeriod": "25 سنة",
@@ -53,7 +53,7 @@ const PLOTS_GEOJSON = {
     {
       "type": "Feature",
       "properties": {
-        "name": "مجمع خدمات لوجيستي 2",
+        "name": "مجمع خدمات لوجيستي صناعي",
         "plotNumber": "",
         "projectType": "كبرى",
         "contractPeriod": "25 سنة",
@@ -177,7 +177,7 @@ const PLOTS_GEOJSON = {
         "plotNumber": "",
         "projectType": "كبرى",
         "contractPeriod": "25 سنة",
-        "area": 24449.38,
+        "area": 24449,
         "buckletPrice": 0,
         "activity": "تجاري",
         "district": "حي البساتين الإداري الغربي",
@@ -509,7 +509,7 @@ const PLOTS_GEOJSON = {
     {
       "type": "Feature",
       "properties": {
-        "name": "داون تاون رفحا",
+        "name": "داون تاون رفحاء",
         "plotNumber": "",
         "projectType": "كبرى",
         "contractPeriod": "25 سنة",
@@ -749,7 +749,7 @@ const PLOTS_GEOJSON = {
     {
       "type": "Feature",
       "properties": {
-        "name": "اعلان يوني بول عدد (20 لوحات)",
+        "name": "لوحات اعلانية يوني بول",
         "plotNumber": "01-25-013001-41002",
         "projectType": "كبرى",
         "contractPeriod": "10 سنوات",
@@ -941,7 +941,7 @@ const PLOTS_GEOJSON = {
     {
       "type": "Feature",
       "properties": {
-        "name": "(اعلان شاشات (عدد 3 لوحات",
+        "name": "اعلا شاشات جسور",
         "plotNumber": "01-25-013001-41001",
         "projectType": "متوسطة",
         "contractPeriod": "10 سنوات",
@@ -965,7 +965,7 @@ const PLOTS_GEOJSON = {
     {
       "type": "Feature",
       "properties": {
-        "name": "اعلان يوني بول عدد (6 لوحات)",
+        "name": "اعلان لوحات يوني بول",
         "plotNumber": "01-25-013001-40001",
         "projectType": "متوسطة",
         "contractPeriod": "10 سنوات",
