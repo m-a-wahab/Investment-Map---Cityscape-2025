@@ -566,6 +566,8 @@ document.addEventListener('DOMContentLoaded', () => {
     activitySelect.value = "all";
     typeSelect.value = "all";
 
+    typeSegContainer.querySelectorAll('.seg').forEach(b => b.classList.remove('active'));
+
     areaMinRange.value = "0";
     areaMaxRange.value = "5000000";
 
