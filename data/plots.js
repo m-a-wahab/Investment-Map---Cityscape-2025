@@ -544,7 +544,7 @@ const PLOTS_GEOJSON = {
         "googleMapLink": "https://maps.app.goo.gl/NQZf8o5ptoPjqGRcA",
         "advertiseDate": "",
         "openEnvelopesDate": "",
-        // "images": ["images/opportunities/داون تاون طريف.jpg"]
+        "images": ["images/opportunities/داون تاون طريف.jpg"]
       },
       "geometry": {
         "type": "Point",
@@ -941,7 +941,7 @@ const PLOTS_GEOJSON = {
     {
       "type": "Feature",
       "properties": {
-        "name": "اعلا شاشات جسور",
+        "name": "اعلان شاشات جسور",
         "plotNumber": "01-25-013001-41001",
         "projectType": "متوسطة",
         "contractPeriod": "10 سنوات",
@@ -1007,30 +1007,6 @@ const PLOTS_GEOJSON = {
         "coordinates": [
           41.1030556,
           30.9386944
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "مدينة طبية",
-        "plotNumber": "",
-        "projectType": "كبرى",
-        "contractPeriod": "25 سنة",
-        "area": 17871.0,
-        "buckletPrice": 0,
-        "activity": "طبي",
-        "district": "اشبيلية",
-        "googleMapLink": "https://maps.app.goo.gl/F8HfGwX6S39mVT7MA",
-        "advertiseDate": "",
-        "openEnvelopesDate": "",
-        "images": ["images/opportunities/مدينة طبية.jpg"] 
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          40.99425,
-          31.00225
         ]
       }
     },
