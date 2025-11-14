@@ -77,7 +77,7 @@ const PLOTS_GEOJSON = {
     {
       "type": "Feature",
       "properties": {
-        "name": "مدينة ألاثاث والغذاء",
+        "name": "مركز حضري مستدام",
         "plotNumber": "",
         "projectType": "كبرى",
         "contractPeriod": "25 سنة",
@@ -88,7 +88,7 @@ const PLOTS_GEOJSON = {
         "googleMapLink": "https://maps.app.goo.gl/dfhGZkA1mKD7ufB36",
         "advertiseDate": "",
         "openEnvelopesDate": "",
-        "images": ["images/opportunities/مدينة ألاثاث والغذاء.jpg"]
+        "images": ["images/opportunities/مركز حضري مستدام.jpg"]
       },
       "geometry": {
         "type": "Point",
